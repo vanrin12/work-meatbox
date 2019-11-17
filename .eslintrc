@@ -20,16 +20,17 @@
   "plugins": ["react", "flowtype"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          ".storybook/**",
-          "stories/**"
-        ],
-        "peerDependencies": ["client/client"]
-      }
-    ],
+    // "import/no-extraneous-dependencies": [
+    //   "error",
+    //   {
+    //     "devDependencies": [
+    //       ".storybook/**",
+    //       "stories/**"
+    //     ],
+    //     "peerDependencies": ["client/client"]
+    //   }
+    // ],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": false}],
     "import/no-named-as-default": "off"
   },
   "settings": {

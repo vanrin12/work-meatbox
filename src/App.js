@@ -1,12 +1,20 @@
 // @flow
 import React from 'react';
 import './App.scss';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import createStore from 'store/createStore';
 import Router from './router';
 
 function App() {
+  const { store, persistor } = createStore();
   return (
     <div className="App">
-      <Router />
+      <PersistGate loading={null} persistor={persistor}>
+        <Provider store={store}>
+          <Router />
+        </Provider>
+      </PersistGate>
     </div>
   );
 }
