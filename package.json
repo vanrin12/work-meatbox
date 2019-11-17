@@ -8,7 +8,7 @@
     "react-dom": "^16.12.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-screipts": "3.2.0",
+    "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-persist": "^6.0.0",
     "reduxsauce": "^1.1.1",
