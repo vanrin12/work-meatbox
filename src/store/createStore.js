@@ -3,8 +3,11 @@ import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+import { seamlessImmutableReconciler } from 'redux-persist-seamless-immutable';
+
 import appReducers from './rootReducers';
-import RootSagas from './rootSagas';
+
+// import RootSagas from './rootSagas';
 
 // creates the store
 export default () => {
@@ -15,7 +18,9 @@ export default () => {
 
   const persistConfig = {
     key: 'root',
-    storage
+    storage,
+    stateReconciler: seamlessImmutableReconciler
+    // transforms: [seamlessImmutableTransformer]
   };
 
   // eslint-disable-next-line no-underscore-dangle
@@ -53,7 +58,7 @@ export default () => {
   const persistor = persistStore(store);
 
   // kick off root saga
-  sagaMiddleware.run(RootSagas);
+  // sagaMiddleware.run(RootSagas);
 
   return { store, persistor };
 };

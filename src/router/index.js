@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ROUTERS from 'constants/routers';
-import Homepage from 'pages/Home';
+import HomepageContainer from 'pages/Home/containers/HomeContainer';
 
 // Constants
 
@@ -13,7 +13,7 @@ const Router = () => {
       <main>
         <Switch>
           {/* Public routers */}
-          <Route exact path={ROUTERS.ROOT} component={Homepage} />
+          <Route exact path={ROUTERS.ROOT} component={HomepageContainer} />
         </Switch>
       </main>
     </BrowserRouter>

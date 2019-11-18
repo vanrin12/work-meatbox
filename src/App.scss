@@ -1,22 +1,23 @@
-.App {
-  text-align: center;
-}
+@import './styles/reset';
 
-.App-logo {
-  height: 40vmin;
-}
+// variables
+@import './styles/variables';
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// mixins
+@import './styles/mixins';
 
-.App-link {
-  color: #09d3ac;
-}
+// functions
+@import './styles/functions';
+
+// fonts
+@import './styles/fonts';
+
+// placeholders
+@import './styles/placeholders';
+
+// base
+@import './styles/base';
+
+// components
+@import './components/Button/styles';
+

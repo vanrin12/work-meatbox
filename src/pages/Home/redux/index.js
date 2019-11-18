@@ -12,15 +12,18 @@ export const INITIAL_STATE = Immutable({
   name: ''
 });
 
-const testRedux = state =>
-  state.merge({
+const testRedux = state => {
+  console.log('state', state);
+
+  return state.merge({
     name: 'success'
   });
+};
 
 // Assign handler to types.
 const HANDLERS = {
-  [Types.test_REDUX]: testRedux
+  [Types.TEST_REDUX]: testRedux
 };
 
 // Create reducers by pass state and handlers
-export const home = createReducer(INITIAL_STATE, HANDLERS);
+export const homeReducer = createReducer(INITIAL_STATE, HANDLERS);
