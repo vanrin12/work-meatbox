@@ -1,68 +1,132 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#  Meatbox admin
 
-## Available Scripts
+## :arrow_up: How to Setup
 
-In the project directory, you can run:
+**Step 1:** git clone this repository: `git clone [repo_url]`
 
-### `yarn start`
+**Step 2:** cd to the cloned repository: `cd webapp`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Step 3:** Install the Application with `yarn`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+## :arrow_forward: How to Run App
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. cd to the repo
+2. Run & Build
+  * Run
+    * Run `yarn start`
+    * View app on http://localhost:3000/
+  * Build
+    * Run `yarn build`
+    * View `build` folder in the repository
 
-### `yarn build`
+## :closed_lock_with_key: Secrets
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+API keys and other sensitive information are shared privately and stored in a .env.[environment] file.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Example file: `.env.sample`
+```
+REACT_APP_API_URL=https://myapi.com
+REACT_APP_API_KEY=abc12345
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and access them from React app like so:
 
-### `yarn eject`
+```
+process.env.REACT_APP_API_URL
+process.env.REACT_APP_API_KEY
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The `.env.[environment]` file is ignored by git keeping those secrets out of the repository.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Storybook
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Run `yarn storybook`
+* View storybook page on http://localhost:6006/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Frontend Technical Stack
+This is the list of important technologies that would be used to implement the project.
 
-## Learn More
+### Technical stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Languages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**HTML5**
+Hypertext Markup Language revision 5 (HTML5) is a markup language for the structure and presentation of World Wide Web contents. HTML5 supports the traditional HTML and XHTML-style syntax and other new features in its markup, New APIs, XHTML and error handling.
 
-### Code Splitting
+**CSS3**
+A cascading style sheet (CSS) is a Web page derived from multiple sources with a defined order of precedence where the definitions of any style element conflict.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**SASS**
+- Sass (Syntactically Awesome Stylesheets) is a style sheet language.
+- Homepage: http://sass-lang.com
 
-### Analyzing the Bundle Size
+**JavaScript**
+- An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+- ECMAScript 2015 is an ECMAScript standard that was ratified in June 2015. ES2015 is a significant update to the language, and the first major update to the language since ES5 was standardized in 2009.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### Tools & Libraries
 
-### Making a Progressive Web App
+**React**
+- A JavaScript library for building user interface.
+- Homepage: https://facebook.github.io/react
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+**Redux** - [http://redux.js.org](http://redux.js.org/). Redux is a predictable state container for JavaScript apps.
 
-### Advanced Configuration
+**ReduxSauce** - [https://github.com/jkeam/reduxsauce](https://github.com/jkeam/reduxsauce). Provides a few tools for working with Redux-based code bases.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+**Redux persist** - [https://github.com/rt2zz/redux-persist](https://github.com/rt2zz/redux-persist). Using Redux-Persist to Store Your State in LocalStorage
 
-### Deployment
+**ImmutableJS** - [https://facebook.github.io/immutable-js](https://facebook.github.io/immutable-js). Immutable collections for JavaScript.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+**Apisauce** - [https://github.com/skellock/apisauce](https://github.com/skellock/apisauce). A JSON API client for JavaScript.
 
-### `yarn build` fails to minify
+**Redux Saga** - [https://github.com/redux-saga/redux-saga](https://github.com/redux-saga/redux-saga). Is a library that aims to make side effects. It uses an ES6 feature called Generators to make those asynchronous flows easy to read, write & test.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+**Webpack**
+- Webpack is a module bundler. Webpack takes modules with dependencies and generates static assets representing those modules.
+- Homepage: https://webpack.github.io
+- Plugins
+  - **Webpack Dev Middleware**
+    - The webpack-dev-middleware is a small middleware for a connect-based middleware stack. It uses webpack to compile assets in-memory and serve them. When a compilation is running every request to the served webpack assets is blocked until we have a stable bundle.
+    - Homepage: https://github.com/webpack/webpack-dev-middleware
+  - **TerserWebpackPlugin**
+    - Minimize all JavaScript output of chunks. Loaders are switched into minimizing mode.
+    - Homepage: https://webpack.js.org/plugins/terser-webpack-plugin/
+- Loaders
+  - **Sass**
+    - CSS loader for Webpack
+    - Homepage: https://github.com/jtangelder/sass-loader
+  - **CSS**
+    - SASS loader for Webpack
+    - Homepage: https://github.com/webpack-contrib/css-loader
+  - **ESLint**
+    - The pluggable linting utility for JavaScript and JSX
+    - Homepage: https://github.com/eslint/eslint
+  - **File**
+    - File loader for Webpack
+    - Homepage: https://github.com/webpack-contrib/file-loader
+  - **Style**
+    - Style loader for Webpack
+    - Homepage: https://github.com/webpack-contrib/style-loader
+
+**Flow**
+- Is a Static Type Checker for JavaScript.
+- Homepage: https://flow.org
+
+**Storybook**
+- Is an open source tool for developing UI components in isolation for React, Vue, and Angular. It makes building stunning UIs organized and efficient.
+- Homepage: https://storybook.js.org
+
+**React-router**
+- Declarative routing for React.
+- Homepage: https://github.com/ReactTraining/react-router
+
+**Husky**
+- Husky can prevent bad git commit, git push.
+- Homepage: https://github.com/typicode/husky
+
+**Prettier**
+- Prettier is an opinionated code formatter
+- Homepage: https://prettier.io

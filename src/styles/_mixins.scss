@@ -1,0 +1,42 @@
+/*
+ * mixin: fontFamily
+ * Used to set setup font-face and font-family
+*/
+@mixin fontFamily($font-name, $font-url) {
+  @font-face {
+    font-family: $font-name;
+    src: url('#{$font-url}#{$font-name}.ttf');
+  }
+}
+
+/*
+ * mixin: fontSize
+ * Used to setup font-size
+*/
+@mixin fontSize($size) {
+  font-size: pxToRem($size);
+}
+
+/*
+ *mixin: boxShadow
+ *Used to setup box-shadow
+*/
+@mixin boxShadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+/*
+ *mixin: border
+ *Used to setup border
+*/
+@mixin border($width, $style, $color, $direction: false) {
+  @if $direction {
+    border-#{$direction}: $width $style $color;
+  }
+
+  @else {
+    border: $width $style $color;
+  }
+}
