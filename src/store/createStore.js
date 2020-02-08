@@ -7,7 +7,7 @@ import { seamlessImmutableReconciler } from 'redux-persist-seamless-immutable';
 
 import appReducers from './rootReducers';
 
-// import RootSagas from './rootSagas';
+import RootSagas from './rootSagas';
 
 // creates the store
 export default () => {
@@ -58,7 +58,7 @@ export default () => {
   const persistor = persistStore(store);
 
   // kick off root saga
-  // sagaMiddleware.run(RootSagas);
+  sagaMiddleware.run(RootSagas);
 
   return { store, persistor };
 };

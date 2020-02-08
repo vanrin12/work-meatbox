@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { homeReducer } from 'pages/Home/redux';
+import { homeReducer } from 'home/redux';
+import { accountReducer } from 'users/redux';
 
 const appReducer = combineReducers({
-  homeReducer
+  homeReducer,
+  accountReducer
 });
 
 export default appReducer;

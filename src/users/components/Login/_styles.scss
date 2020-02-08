@@ -1,0 +1,18 @@
+.container-scroller {
+  .page-body-wrapper.full-page-wrapper {
+    width: 100%;
+    padding-top: 0;
+  }
+  .content-wrapper {
+    background: $backgroundColor;
+    padding: 1.5rem 2.5rem;
+    width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    height: 100vh;
+  }
+
+  .auth-form-light {
+    background: $white;
+  }
+}

@@ -21,10 +21,10 @@
  *mixin: boxShadow
  *Used to setup box-shadow
 */
-@mixin boxShadow($top, $left, $blur, $color, $inset:"") {
-  -webkit-box-shadow:$top $left $blur $color #{$inset};
-  -moz-box-shadow:$top $left $blur $color #{$inset};
-  box-shadow:$top $left $blur $color #{$inset};
+@mixin boxShadow($top, $left, $blur, $color, $inset: '') {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
 }
 
 /*
@@ -34,9 +34,80 @@
 @mixin border($width, $style, $color, $direction: false) {
   @if $direction {
     border-#{$direction}: $width $style $color;
+  } @else {
+    border: $width $style $color;
+  }
+}
+
+@mixin transition($time) {
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+  transition: $time;
+}
+
+@mixin breakpoint($point) {
+  @if ($point==lgmax17) {
+    @media (max-width: 1700px) {
+      @content;
+    }
   }
 
-  @else {
-    border: $width $style $color;
+  @if ($point==ml600) {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if ($point==xl600) {
+    @media (max-width: 1599px) {
+      @content;
+    }
+  }
+
+  @if ($point==xl500) {
+    @media (max-width: 1499px) {
+      @content;
+    }
+  } @else if ($point==lg1280) {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if ($point==lg1200) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  } @else if ($point==sm992) {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if ($point==sm768) {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($point==xm480) {
+    @media (max-width: 480px) {
+      @content;
+    }
+  } @else if ($point==sm375) {
+    @media (max-width: 375px) {
+      @content;
+    }
+  } @else if ($point==sm360) {
+    @media (max-width: 360px) {
+      @content;
+    }
+  } @else if ($point==sm320) {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if ($point==min992) {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($point==min768) {
+    @media (min-width: 768px) {
+      @content;
+    }
   }
 }

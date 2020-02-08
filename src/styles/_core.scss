@@ -1,0 +1,28 @@
+.error-msg {
+  margin-top: pxToRem(10);
+  text-align: left;
+  color: $red;
+  font-size: pxToRem(13);
+}
+
+.wrapper-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.spinner-grow {
+  width: pxToRem(100) !important;
+  height: pxToRem(100) !important;
+}
+
+.pagination {
+  justify-content: flex-end;
+  padding-right: pxToRem(19);
+  margin-top: pxToRem(16);
+  justify-content: center;
+  .page-item {
+    cursor: pointer;
+  }
+}

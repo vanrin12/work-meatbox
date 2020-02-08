@@ -1,60 +1,13 @@
-
 $font-size-base: 16;
 $border-width-base: 2;
 
-/**
- * Variable for colors
-*/
-$white: #fff;
-$white-opacity-2: rgba(255, 255, 255, 0.2);
-$wild-sand: #f4f4f4;
-$brown: #4a4a4a;
-$gallery: #ececec;
-$mercury: #e4e4e4;
-$alto: #e0e0e0;
-$steal: #d7d7de;
-$hummer: #ccc;
-$dusty-gray: #9b9b9b;
-$dusty-gray-secondary: #979797;
-$d-gray-sec-opacity-55: rgba(151, 151, 151, 0.55);
-$gray: #919191;
-$gray-light: #d7d8df;
+// colors
+$backgroundColor: #dddce1;
+$alto-ess: #eee;
 $dove-gray: #666666;
-$dove-gray-light: #6a6b86;
-$iron: #393939;
-$steal-transparent: #05083229;
-$dove-transparent: #0000001f;
-$cove-transparent: #0000002b;
-$stone-transparent: #05083299;
-$alto-transparent: rgba(156, 156, 156, 0.7);
-$deep-cove: #060834;
-$deep-cove-transparent: #787991;
-$black: #000;
-$silver: #bbb;
-$orange: #fc6915;
-$black-light: #222222;
-$orange-transparent: #fc69153d;
-$orange-transparent-weight: rgba(252, 105, 21, 0.5);
-$blue-darker: #e5f0fe;
-$black-transparent: #0000003d;
-$black-pearl-opacity-1: rgba(3, 13, 39, 0.1);
-$black-pearl-opacity-32: rgba(3, 13, 39, 0.32);
-
-$governor: #3941bf;
-$wistful: #2e3391;
-
-$cherry: #d0021b;
-$red: #e00000;
-
-/**
- * Variables for button
-*/
-$btn-primary-bg: $orange;
-$btn-transparent-bg: $white;
-$btn-secondary-bg: $silver;
-$btn-outline-bg: $white;
-$btn-color-primary: $white;
-$btn-outline-color: $orange;
-$btn-transparent-color: $dove-gray-light;
-$btn-outline-border: $orange;
-$btn-transparent-border: $gray-light;
+$red: red;
+$white: #fff;
+$blue-linght: #1b8eb7;
+$color-box1: #396c98;
+$dusty-gray: #9b9b9b;
+$textBody: #23282c;

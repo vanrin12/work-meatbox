@@ -1,5 +1,6 @@
 const ROUTERS = {
-  ROOT: '/'
+  ROOT: '/',
+  LOGIN: '/login'
 };
 
 export default ROUTERS;

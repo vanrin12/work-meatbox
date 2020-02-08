@@ -1,23 +1,47 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 // Components
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import PrivateRoute from 'utils/PrivateRouter';
+import HomepageContainer from 'home/containers/HomeContainer';
 import ROUTERS from 'constants/routers';
-import HomepageContainer from 'pages/Home/containers/HomeContainer';
+import SigninContainer from 'users/containers/SigninContainer';
+import { API } from 'utils/Apis';
 
-// Constants
-
-const Router = () => {
+type Props = {
+  token: string
+};
+const Router = ({ token }: Props) => {
+  const isAuthenticated = token !== '';
+  if (token) {
+    API.setHeader('Authorization', 'Bearer ' + token);
+  }
   return (
     <BrowserRouter>
       <main>
         <Switch>
-          {/* Public routers */}
-          <Route exact path={ROUTERS.ROOT} component={HomepageContainer} />
+          <Route exact path={ROUTERS.LOGIN} component={SigninContainer} />
+          {/* private routers */}
+          <PrivateRoute
+            exact
+            path={ROUTERS.ROOT}
+            component={HomepageContainer}
+            isAuthenticated={isAuthenticated}
+          />
         </Switch>
       </main>
     </BrowserRouter>
   );
 };
 
-export default Router;
+const mapStateToProps = state => {
+  return {
+    token: state.accountReducer.token
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Router);

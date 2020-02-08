@@ -5,10 +5,15 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
 // Component
-import { Button } from 'components/Button';
+import Input from 'components/Input';
 
-storiesOf('Button', module)
+storiesOf('Input', module)
   .addDecorator(withInfo)
-  .add('Primary', () => (
-    <Button text="Click Me" type="primary" onPress={action('clicked')} />
+  .add('Input component', () => (
+    <Input
+      placeholder="input value"
+      type="text"
+      label="User"
+      onChange={action('on-change')}
+    />
   ));

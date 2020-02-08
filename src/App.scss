@@ -18,6 +18,12 @@
 // base
 @import './styles/base';
 
-// components
-@import './components/Button/styles';
+// core
+@import './styles/core';
 
+// components
+@import './components/Input/styles';
+@import './components/Table/styles';
+
+// user module
+@import 'users/components/Login/styles';
