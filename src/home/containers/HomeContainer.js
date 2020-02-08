@@ -6,7 +6,8 @@ import { Creators } from '../redux';
 
 const mapStateToProps = state => {
   return {
-    userList: state.homeReducer.userList
+    userList: state.homeReducer.userList,
+    isProcessing: state.homeReducer.isProcessing
   };
 };
 
