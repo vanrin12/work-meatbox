@@ -28,7 +28,7 @@ const Signin = ({ signIn, type, token, isProcessing, history }: Props) => {
   useEffect(() => {
     switch (type) {
       case Types.SIGN_IN_SUCCESS:
-        API.setHeader('Authorization', 'Bearer' + token);
+        API.setHeader('Authorization', 'Bearer ' + token);
         history.push(ROUTERS.ROOT);
         break;
       default:

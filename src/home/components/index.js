@@ -18,7 +18,7 @@ const Home = ({ getUserList, userList }: Props) => {
 
   return (
     <div className="home-page">
-      <h1>User Management</h1>
+      <h1>Users Management Test App</h1>
       <Table tableHeads={userHeadTable} tableBody={userList} />
       <div className="wrapper-pagination">
         <ReactPaginate
