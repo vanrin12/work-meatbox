@@ -4,9 +4,9 @@
 
 **Step 1:** git clone this repository: `git clone [repo_url]`
 
-**Step 2:** cd to the cloned repository: `cd webapp`
+**Step 2:** cd to the cloned repository: `cd test-app`
 
-**Step 3:** Install the Application with `yarn`
+**Step 3:** Install the Application with `yarn` or `npm`
 
 ## :arrow_forward: How to Run App
 
