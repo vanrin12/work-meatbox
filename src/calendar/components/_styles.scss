@@ -1,0 +1,85 @@
+.calendar-page {
+  background-color: $white;
+  padding-left: pxToRem(10);
+
+  .rows {
+    width: 100%;
+  }
+
+  .week-day {
+    font-family: $openSans;
+    width: 14%;
+    color: $textBody;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  .date-item {
+    background-color: $white-linght;
+    width: 14%;
+    height: 100vh;
+    margin-right: pxToRem(10);
+    border-radius: pxToRem(6);
+    padding: pxToRem(10) pxToRem(10);
+  }
+
+  .group-todo {
+    background: $bg-group;
+    border: pxToRem(1) solid rgba(34, 36, 38, 0.15);
+    box-sizing: border-box;
+    border-radius: pxToRem(6);
+    margin-top: pxToRem(5);
+    padding: pxToRem(10);
+    cursor: pointer;
+  }
+
+  .title-todo {
+    color: $blue-linght;
+    font-size: pxToRem(14);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .todo-item {
+    border: pxToRem(1) solid #dfdfdf;
+    margin-top: pxToRem(5);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: pxToRem(3);
+    padding: 0 pxToRem(10) 0;
+  }
+
+  .wrapper-plus-btn {
+    width: 100%;
+    text-align: right;
+    padding: pxToRem(10);
+
+    .btn {
+      border-radius: 50% 50%;
+      background-color: #a0a8b1;
+      border: none;
+    }
+  }
+
+  .todo-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: pxToRem(10);
+  }
+
+  .todo-name {
+    padding-left: pxToRem(33);
+  }
+
+  .todo-quantity {
+    color: #919cad;
+    font-weight: bold;
+  }
+
+  .todo-info {
+    color: #95a6b7;
+  }
+
+  .current-date {
+    background-color: $blue-linght;
+  }
+}

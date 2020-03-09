@@ -26,3 +26,10 @@
     cursor: pointer;
   }
 }
+
+.overflow {
+  white-space: nowrap;
+  width: pxToRem(140);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

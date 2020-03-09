@@ -1,6 +1,7 @@
 const ROUTERS = {
   ROOT: '/',
-  LOGIN: '/login'
+  LOGIN: '/login',
+  CALENDAR: '/calendar'
 };
 
 export default ROUTERS;

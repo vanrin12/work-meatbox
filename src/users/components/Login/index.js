@@ -29,7 +29,7 @@ const Signin = ({ signIn, type, token, isProcessing, history }: Props) => {
     switch (type) {
       case Types.SIGN_IN_SUCCESS:
         API.setHeader('Authorization', 'Bearer ' + token);
-        history.push(ROUTERS.ROOT);
+        history.push(ROUTERS.CALENDAR);
         break;
       default:
         break;

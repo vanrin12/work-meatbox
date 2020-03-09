@@ -7,6 +7,7 @@ import PrivateRoute from 'utils/PrivateRouter';
 import HomepageContainer from 'home/containers/HomeContainer';
 import ROUTERS from 'constants/routers';
 import SigninContainer from 'users/containers/SigninContainer';
+import Calendar from 'calendar/containers';
 import { API } from 'utils/Apis';
 
 type Props = {
@@ -27,6 +28,14 @@ const Router = ({ token }: Props) => {
             exact
             path={ROUTERS.ROOT}
             component={HomepageContainer}
+            isAuthenticated={isAuthenticated}
+          />
+
+          {/** calendar working on */}
+          <PrivateRoute
+            exact
+            path={ROUTERS.CALENDAR}
+            component={Calendar}
             isAuthenticated={isAuthenticated}
           />
         </Switch>
